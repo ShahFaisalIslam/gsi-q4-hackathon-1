@@ -1,55 +1,52 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: 0.0.0 → 1.0.0
+Modified principles:
+  - Spec-Driven Development (Added)
+  - Prompt History Records (Added)
+  - Architectural Decision Records (Added)
+  - Small, Testable Changes (Added)
+  - Human-in-the-Loop Interaction (Added)
+Added sections:
+  - Development Guidelines
+  - Code Standards
+Removed sections: None
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ✅ updated
+  - .specify/templates/spec-template.md: ✅ updated
+  - .specify/templates/tasks-template.md: ✅ updated
+  - .specify/templates/commands/sp.phr.md: ✅ updated
+  - README.md: ⚠ pending
+Follow-up TODOs: None
+-->
+# GIAIC Hackathon 1 Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development (SDD)
+Every feature, bug fix, or enhancement must begin with a clear, machine-readable specification (`spec.md`). This spec serves as the single source of truth for requirements and expected behavior, ensuring alignment across design, implementation, and testing. All work must trace back to an approved spec.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Prompt History Records (PHRs)
+Every significant user interaction, decision, and development step MUST be recorded as a Prompt History Record. PHRs provide an immutable audit trail, capture context, and enable learning from past exchanges. They are essential for traceability, debugging, and knowledge transfer within the project.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Architectural Decision Records (ADRs)
+Architecturally significant decisions, including major design choices, technology selections, and trade-offs, MUST be documented in Architectural Decision Records. ADRs provide transparency, capture rationale, and establish precedents for future development, promoting consistency and maintainability.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Small, Testable Changes
+All code changes MUST be small, atomic, and independently testable. Prefer incremental modifications over large, monolithic changes. Each commit or pull request should address a single, well-defined problem or feature, making reviews easier, reducing the risk of regressions, and simplifying debugging.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Human-in-the-Loop Interaction
+The development process MUST incorporate explicit human review and approval at critical junctures. Automation supports, but does not replace, human judgment. Agents MUST surface key decisions, plans, and completed work for user confirmation, ensuring alignment and quality control.
 
-### [PRINCIPLE_6_NAME]
+## Development Guidelines
 
+All agents MUST prioritize and use MCP tools and CLI commands for all information gathering and task execution. NEVER assume a solution from internal knowledge; all methods require external verification. Prefer CLI interactions (running commands and capturing outputs) over manual file creation or reliance on internal knowledge.
 
-[PRINCIPLE__DESCRIPTION]
+## Code Standards
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Code quality, testing, performance, security, and architecture principles are derived from the overall SDD process and enforced through specifications and plans.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This Constitution supersedes all other practices and documentation within the project. Amendments require a formal proposal, review, and approval process, documented in an ADR. Versioning follows semantic versioning rules (MAJOR.MINOR.PATCH). All PRs and code reviews must verify compliance with these principles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-04-17 | **Last Amended**: 2026-04-17

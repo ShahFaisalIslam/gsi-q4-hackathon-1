@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **Spec-Driven Development**: Is there a clear, machine-readable specification (`spec.md`) that defines the requirements and expected behavior for this feature?
+- [ ] **Prompt History Records**: Will all significant interactions and decisions related to this plan be recorded as PHRs?
+- [ ] **Architectural Decision Records**: Are there any architecturally significant decisions in this plan that warrant an ADR?
+- [ ] **Small, Testable Changes**: Does this plan break down the work into small, atomic, and independently testable units?
+- [ ] **Human-in-the-Loop Interaction**: Does this plan include explicit points for human review and approval?
 
 ## Project Structure
 
