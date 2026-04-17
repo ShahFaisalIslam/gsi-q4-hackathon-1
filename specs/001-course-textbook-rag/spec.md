@@ -103,9 +103,12 @@ As a student, I want to select a specific portion of the textbook text and ask t
 -   **FR-006**: The RAG chatbot MUST provide concise, relevant answers to student queries based on the course material.
 -   **FR-007**: The RAG chatbot MUST be able to identify when a query is outside the scope of the textbook content.
 -   **FR-008**: The textbook MUST offer navigation features, including a table of contents, and next/previous page/section controls.
--   **FR-009**: The textbook content MUST be searchable.
+-   **FR-009**: The textbook content MUST be searchable via a full-text search across the entire textbook, with results highlighting relevant passages.
 -   **FR-010**: The system MUST be able to update course content and chatbot knowledge base easily.
--   **FR-011**: The RAG chatbot MUST be able to process queries based solely on a user-selected text segment from the textbook.
+
+-   **FR-011**: The RAG chatbot MUST be able to process queries based solely on a user-selected text segment from the textbook, with a minimum selection of a paragraph and a maximum of a single page.
+-   **FR-012**: When a query cannot be answered from selected text, the chatbot MUST suggest broadening the search to the entire textbook.
+-   **FR-013**: The chatbot MUST communicate gracefully when a selected text snippet is insufficient for a meaningful answer, by providing a polite message and suggesting a broader query if the initial selection was very small.
 
 ### Key Entities
 
